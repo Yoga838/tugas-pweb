@@ -13,8 +13,10 @@ while ($i<=100){
         //make an table row with bg color black and font color white and make a table data with widht 7% and font align center 
         echo "<tr bgcolor ='black' style='color:white'><td width='7%'style='text-align :center'><p>$i</p></td><td><p>&nbsp;ini baris ke-$i</p></tr>";
     }
-    //make an table row with bg color white and make a table data with widht 7% and font align center 
-    echo "<tr bgcolor ='white'><td width='7%'style='text-align :center'><p>$i</p></td><td><p>&nbsp;ini baris ke-$i</p></tr>";
+    else{        
+        //make an table row with bg color white and make a table data with widht 7% and font align center 
+        echo "<tr bgcolor ='white'><td width='7%'style='text-align :center'><p>$i</p></td><td><p>&nbsp;ini baris ke-$i</p></tr>";
+    };
     //this is for increments in each iteration of variable $i so the while condition immediately changes to false when it is reached
     $i++;
     //tag for ending the table tag
