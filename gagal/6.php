@@ -4,4 +4,4 @@ echo count($iniarr);
 $arr2 = array (1,2,3,4,5);
 echo "<br>";
 echo count($arr2);
-?>
+?>  
