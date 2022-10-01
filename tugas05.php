@@ -15,9 +15,11 @@ class segitiga {
         $this->$alas = $alas;
         $this->$tinggi = $tinggi;
         $luas = ($this->$alas*$this->$tinggi)*0.5;
+        //menggunakan rumus pitagoras untuk mencari sisi miring
         $samping = $alas**2 + $tinggi**2;
         $samping = sqrt($samping);
-        $keliling = $alas + $samping + $samping;
+        //menghitung keliling menggunakan rumus sisi + sisi + sisi dengan asumsi segitiganya adalah segitiga siku siku
+        $keliling = $alas + $samping + $tinggi;
         $keliling = number_format((float)$keliling,2,'.',''); 
         echo "jika ada segitiga dengan nilai alas " . $this->$alas . " dan tinggi " . $this->$tinggi . ",maka luasnya adalah <font color='red'>" . $luas . "</font> dan kelilingnya adalah <font color='red'>" . $keliling . "</font>";
     }
