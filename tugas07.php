@@ -41,16 +41,15 @@
             <th class="ratakanan">Jumlah</th>
         </tr>
         <?php $begin = new DateTime( "2022-01-01" );
-              $temp = $begin; 
               $num = 1000; 
               for ($i=1;$i<=999;$i++){
                 $amount = number_format($num,0,"","."); 
                 $digit = str_pad($i, 3, '0', STR_PAD_LEFT); ?>
             <tr>
                 <td class="ratakiri"><?php echo  $i;?></td>
-                <td class="ratakiri"><?php echo $temp->format("j-F-Y"); ?></td>
-                <?php $date = $temp->format("Y-m-d"); ?>
-                <?php $temp->modify('+1 day'); ?>
+                <td class="ratakiri"><?php echo $begin->format("j-F-Y"); ?></td>
+                <?php $date = $begin->format("Y-m-d"); ?>
+                <?php $begin->modify('+1 day'); ?>
                 <td class="ratakiri"><?php echo "TRN-$date-$digit"; ?></td>
                 <td class="ratakanan"><?php echo "Rp $amount"; ?></td>
                 <?php $num += 1000; ?>
